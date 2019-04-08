@@ -75,21 +75,29 @@ function setLogoutAction(logoutBtn){
 		logoutBtn.addEventListener("click", function(){
 			localStorage.removeItem("userKey");
 			localStorage.removeItem("passKey");
+			localStorage.removeItem("sentDK");
 		});
 	}
 	catch(err){
 	}
 }
-
-if(document.getElementsByTagName("body")[0].outerText.includes("unavailable"))
-	setTimeout(function(){location.reload();}, 1500); // reload nếu server quá tải
-else if(window.location.href.includes("DangNhap")){
-	getVarLogin();
+if(localStorage.getItem("sentDK")==null){
+	if(document.getElementsByTagName("body")[0].outerText.includes("unavailable"))
+		setTimeout(function(){location.reload();}, 1500); // reload nếu server quá tải
+	else if(window.location.href.includes("DangNhap")){
+		getVarLogin();
+	}
+	else if (document.getElementById("lbLogOut")!=null){
+		//Đang ở trang có nút đăng xuất -> trang sinh viên,... -> chuyển sang trang đăng kí
+			window.open("http://dangky.tmu.edu.vn/dangkyhoc.aspx","_blank"); // mở trang đăng ký
+			setLogoutAction(document.getElementById("lbLogOut"));
+	}
+	else if(!window.location.href.includes("dangkyhoc")&&document.getElementById("lblHoTen")==null)
+		window.location.href = 'http://dangky.tmu.edu.vn/DangNhap.aspx';
+	else if(window.location.href.includes("dangkyhoc"))
+		document.getElementById("ctl03_btnDangKy").setAttribute("onclick","localStorage.setItem(\"sentDK\",true);");
 }
 else if (document.getElementById("lbLogOut")!=null){
 	//Đang ở trang có nút đăng xuất -> trang sinh viên,... -> chuyển sang trang đăng kí
-		window.open("http://dangky.tmu.edu.vn/dangkyhoc.aspx","_blank"); // mở trang đăng ký
-		setLogoutAction(document.getElementById("lbLogOut"));
+	setLogoutAction(document.getElementById("lbLogOut"));
 }
-else if(!window.location.href.includes("dangkyhoc")&&document.getElementById("lblHoTen")==null)
-	window.location.href = 'http://dangky.tmu.edu.vn/DangNhap.aspx';
