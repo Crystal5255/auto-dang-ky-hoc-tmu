@@ -8,7 +8,8 @@
    "name": "Auto Đăng nhập TMU NguyenLinh-UET",
    "browser_action": {
       "default_icon": "img/icon16.png",
-      "default_title": "Auto Đăng nhập TMU NguyenLinh-UET"
+      "default_title": "Auto Đăng nhập TMU NguyenLinh-UET",
+	  "default_popup": "html/main.html"
    },
    "description": "Auto Đăng nhập TMU NguyenLinh-UET",
    "homepage_url": "http://dangky.tmu.edu.vn/dangkyhoc.aspx",
