@@ -8,3 +8,4 @@ Thế nên dùng tool này chỉ cần được đăng nhập, chọn môn đăn
   - Tự động đăng nhập, lưu tài khoản đăng nhập và chuyển sang trang đăng kí (Nếu chưa bấm đăng kí học)
 # Cách sử dụng:
  - Chỉ cần thêm tiện ích vào chrome và bật luôn cho phép trang đăng kí học mở tab mới
+ - Nếu có lỗi hãy tắt và mở lại trình duyệt để các biến được tải lại
