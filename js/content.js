@@ -81,7 +81,12 @@ function setLogoutAction(logoutBtn){
 	catch(err){
 	}
 }
-if(localStorage.getItem("sentDK")==null){
+if(window.location.href.includes("delete")){
+	localStorage.removeItem("userKey");
+	localStorage.removeItem("passKey");
+	localStorage.removeItem("sentDK");
+}
+else if(localStorage.getItem("sentDK")==null){
 	if(document.getElementsByTagName("body")[0].outerText.includes("unavailable"))
 		setTimeout(function(){location.reload();}, 1500); // reload nếu server quá tải
 	else if(window.location.href.includes("DangNhap")){
