@@ -1,0 +1,25 @@
+{
+   "author": "NguyenLinh-UET",
+   "content_scripts": [ {
+		"js": [ "js/autorun.js" ],
+		"matches": [ "*://dangky.tmu.edu.vn/*" ]
+   } ],
+   "manifest_version": 2,
+   "name": "Auto Đăng nhập TMU NguyenLinh-UET",
+   "browser_action": {
+      "default_icon": "img/icon16.png",
+      "default_title": "Auto Đăng nhập TMU NguyenLinh-UET"
+   },
+   "description": "Auto Đăng nhập TMU NguyenLinh-UET",
+   "homepage_url": "http://dangky.tmu.edu.vn/dangkyhoc.aspx",
+   "icons": {
+      "16": "img/icon16.png",
+      "48": "img/icon48.png",
+      "128": "img/icon128.png"
+   },   
+   "permissions": [ "tabs", "*://dangky.tmu.edu.vn/*" ],
+   "version": "0.1",
+   "web_accessible_resources": [ 
+		"js/content.js" 
+   ]
+}
