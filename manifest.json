@@ -5,13 +5,13 @@
 		"matches": [ "*://dangky.tmu.edu.vn/*" ]
    } ],
    "manifest_version": 2,
-   "name": "Auto Đăng nhập TMU NguyenLinh-UET",
+   "name": "Auto Đăng Ký Học TMU by NguyenLinh-UET",
    "browser_action": {
       "default_icon": "img/icon16.png",
-      "default_title": "Auto Đăng nhập TMU NguyenLinh-UET",
+      "default_title": "Auto Đăng Ký Học TMU by NguyenLinh-UET",
 	  "default_popup": "html/main.html"
    },
-   "description": "Auto Đăng nhập TMU NguyenLinh-UET",
+   "description": "Auto Đăng Ký Học TMU by NguyenLinh-UET",
    "homepage_url": "http://dangky.tmu.edu.vn/dangkyhoc.aspx",
    "icons": {
       "16": "img/icon16.png",
