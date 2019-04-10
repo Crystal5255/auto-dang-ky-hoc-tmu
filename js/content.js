@@ -127,7 +127,6 @@ if(window.location.href.includes("delete")){
 	localStorage.removeItem("passKey");
 	localStorage.removeItem("sentDK");
 	alert("Đã reset, hãy mở tab mới và vào lại trang đăng kí học nhé!");
-	alert("Succesful!");
 }
 else if(localStorage.getItem("sentDK")==null){
 	if(document.getElementsByTagName("body")[0].outerText.includes("unavailable"))
